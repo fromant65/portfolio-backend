@@ -7,47 +7,52 @@ import "./Experience.css"
 const Experience = () => {
   const experiences = [
     {
-      title: "Senior Backend Developer",
-      company: "TechCorp Solutions",
-      location: "Buenos Aires, Argentina",
-      period: "2022 - Presente",
+      title: "Team Leader & Fullstack Developer",
+      company: "Fiduxion",
+      location: "Rosario, Argentina",
+      period: "2024 - Presente",
       description:
-        "Liderazgo técnico en el desarrollo de microservicios escalables. Implementación de arquitecturas cloud-native y optimización de bases de datos para aplicaciones de alto tráfico.",
-      technologies: ["Node.js", "Python", "PostgreSQL", "Docker", "AWS"],
+        "Diseño y desarrollo de páginas web y sistemas especializados.",
+      technologies: ["Typescript", "Next.js", "MySQL", "TRPC", "Drizzle"],
       achievements: [
-        "Reducción del 40% en tiempo de respuesta de APIs",
-        "Implementación de CI/CD que redujo deployments de 2h a 15min",
-        "Mentoreo de 5 desarrolladores junior",
+        "Creación de diversos sistemas de gestión y contabilidad",
+        "Definición de prácticas y procesos ágiles adaptados al entorno",
       ],
     },
     {
-      title: "Backend Developer",
-      company: "FinTech Innovations",
-      location: "Córdoba, Argentina",
-      period: "2020 - 2022",
+      title: "Profesor ayudante de programación",
+      company: "Universidad Nacional de Rosario",
+      location: "Rosario, Argentina",
+      period: "2024 - 2025",
       description:
-        "Desarrollo de sistemas financieros seguros y conformes con regulaciones. Integración con APIs bancarias y implementación de sistemas de pagos.",
-      technologies: ["Java", "Spring Boot", "MySQL", "Redis", "Kubernetes"],
-      achievements: [
-        "Procesamiento de +1M transacciones diarias",
-        "Implementación de sistema de fraud detection",
-        "Certificación PCI DSS Level 1",
-      ],
-    },
+        "Mi tarea fue asistir en clases de programación a ingresantes de la Lic. en Ciencias de la Computación, así como corregir exámenes y generar documentación útil para los alumnos.",
+    },    
     {
       title: "Full Stack Developer",
-      company: "StartupLab",
-      location: "Mendoza, Argentina",
-      period: "2019 - 2020",
+      company: "Freelance",
+      location: "Remoto",
+      period: "2023 - 2025",
       description:
-        "Desarrollo completo de aplicaciones web desde la concepción hasta el deployment. Trabajo directo con stakeholders y definición de arquitectura técnica.",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "GraphQL"],
+        "Desarrollo completo de aplicaciones web desde la concepción hasta el deployment. Trabajo directo con clientes y definición de arquitectura técnica.",
+      technologies: ["Typescript", "Next.js", "Firebase", "TRPC", "ShadCN", "Excel"],
       achievements: [
-        "Lanzamiento de 3 productos MVP exitosos",
-        "Crecimiento de userbase de 0 a 10K usuarios",
-        "Implementación de analytics en tiempo real",
+        "Análisis de seguridad de APIs externas",
+        "Desarrollo de sistemas web y Excel",
       ],
     },
+    {
+      title: "Scripting para aprendizaje de lenguajes",
+      company: "Código abierto",
+      location: "Remoto",
+      period: "2022 - 2024",
+      description: 
+        "El trabajo consistió en generar scripts de análisis de datos y textos, emparejado con la generación de flashcards, para facilitar y guiar el estudio de lenguajes como Inglés y Japonés",
+      technologies: ["Javascript", "Python", "REGEX", "Bunpro"],
+      achievements: [
+        "Generación de miles de flashcards con contenido extraído de textos y música",
+        "Categorización de vocabulario y flashcards para facilitar su estudio"
+      ]
+    }
   ]
 
   return (
@@ -96,25 +101,28 @@ const Experience = () => {
             </div>
 
             <p className="job-description">{exp.description}</p>
-
-            <div className="technologies">
-              {exp.technologies.map((tech, techIndex) => (
-                <span key={techIndex} className="tech-tag">
-                  {tech}
-                </span>
-              ))}
-            </div>
-
-            <div className="achievements">
-              <h4 className="achievements-title">Logros Destacados:</h4>
-              <ul className="achievements-list">
-                {exp.achievements.map((achievement, achIndex) => (
-                  <li key={achIndex} className="achievement-item">
-                    {achievement}
-                  </li>
+            {exp.technologies &&
+              <div className="technologies">
+                {exp.technologies.map((tech, techIndex) => (
+                  <span key={techIndex} className="tech-tag">
+                    {tech}
+                  </span>
                 ))}
-              </ul>
-            </div>
+              </div>
+            }
+
+            {exp.achievements &&
+              <div className="achievements">
+                <h4 className="achievements-title">Logros Destacados:</h4>
+                <ul className="achievements-list">
+                  {exp.achievements?.map((achievement, achIndex) => (
+                    <li key={achIndex} className="achievement-item">
+                      {achievement}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            }
           </motion.div>
         ))}
       </div>
