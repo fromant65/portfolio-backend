@@ -62,32 +62,32 @@ const Education = () => {
     },
   ]
 
-  const courses = [
-    {
-      name: "Machine Learning for Economics",
-      provider: "Stanford Online",
-      duration: "12 semanas",
-      year: "2023",
-    },
-    {
-      name: "Microservices Architecture Patterns",
-      provider: "Pluralsight",
-      duration: "8 semanas",
-      year: "2023",
-    },
-    {
-      name: "Advanced PostgreSQL Performance",
-      provider: "Udemy",
-      duration: "6 semanas",
-      year: "2022",
-    },
-    {
-      name: "Distributed Systems Design",
-      provider: "MIT OpenCourseWare",
-      duration: "16 semanas",
-      year: "2022",
-    },
-  ]
+  // const courses = [
+  //   {
+  //     name: "Machine Learning for Economics",
+  //     provider: "Stanford Online",
+  //     duration: "12 semanas",
+  //     year: "2023",
+  //   },
+  //   {
+  //     name: "Microservices Architecture Patterns",
+  //     provider: "Pluralsight",
+  //     duration: "8 semanas",
+  //     year: "2023",
+  //   },
+  //   {
+  //     name: "Advanced PostgreSQL Performance",
+  //     provider: "Udemy",
+  //     duration: "6 semanas",
+  //     year: "2022",
+  //   },
+  //   {
+  //     name: "Distributed Systems Design",
+  //     provider: "MIT OpenCourseWare",
+  //     duration: "16 semanas",
+  //     year: "2022",
+  //   },
+  // ]
 
   return (
     <section className="education">
