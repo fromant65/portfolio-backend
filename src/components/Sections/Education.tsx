@@ -7,64 +7,57 @@ import "./Education.css"
 const Education = () => {
   const education = [
     {
-      degree: "Licenciatura en Sistemas de Información",
-      institution: "Universidad Tecnológica Nacional",
-      location: "Buenos Aires, Argentina",
-      period: "2017 - 2021",
-      status: "Graduado",
-      gpa: "8.7/10",
+      degree: "Licenciatura en Ciencias de la Computación",
+      institution: "Universidad Nacional de Rosario",
+      location: "Rosario, Argentina",
+      period: "2023 - Presente",
+      status: "En proceso",
+      gpa: "9.1/10",
       description:
-        "Especialización en desarrollo de software, bases de datos y arquitectura de sistemas. Tesis sobre optimización de consultas en bases de datos distribuidas.",
-      highlights: [
-        "Mejor promedio de la promoción",
-        "Ayudante de cátedra en Algoritmos y Estructuras de Datos",
-        "Proyecto final: Sistema de gestión hospitalaria",
-      ],
+        "Carrera que brinda formación integral en informática, algoritmos y sistemas. Su plan de estudios abarca desde ciencias básicas hasta ingeniería de software, preparando a los estudiantes para la investigación y el desarrollo tecnológico.",
     },
     {
-      degree: "Especialización en Ciencias Económicas",
-      institution: "Universidad de Buenos Aires",
-      location: "Buenos Aires, Argentina",
-      period: "2022 - 2023",
+      degree: "Tecnico en Informatica Profesional y Personal",
+      institution: "Instituto Politécnico Superior",
+      location: "Rosario, Argentina",
+      period: "2015 - 2020",
       status: "Completado",
-      gpa: "9.2/10",
+      gpa: "7.4/10",
       description:
-        "Programa enfocado en econometría, análisis cuantitativo y modelado financiero. Integración de conocimientos económicos con desarrollo de software.",
-      highlights: [
-        "Especialización en econometría aplicada",
-        "Proyecto: Modelo predictivo de inflación",
-        "Certificación en análisis de series temporales",
-      ],
+        "Formación técnica y profesional en el área de la computación y el desarrollo de software.",
+    },
+    {
+      degree: "Licenciatura en Ciencias Económicas",
+      institution: "Universidad Nacional de Rosario",
+      location: "Rosario, Argentina",
+      period: "2021 - 2023",
+      status: "Pausado",
+      gpa: "8.3/10",
+      description:
+        "Formación técnica y profesional en el área de la computación y el desarrollo de software.",
     },
   ]
 
   const recognitions = [
     {
-      name: "Medalla de Oro - Olimpiada Matemática Argentina",
-      year: "2016",
+      name: "Mencion de Honor - Olimpiada Matemática Argentina",
+      year: "2017",
       level: "Nacional",
-      description: "Primer lugar en la categoría senior de la Olimpiada Matemática Argentina",
-      icon: "🥇",
+      description: "Mención de honor en el certamen nacional de la Olimpiada Matemática Argentina",
+      icon: "🏆",
     },
     {
-      name: "Medalla de Plata - Olimpiada Iberoamericana de Matemática",
-      year: "2016",
-      level: "Internacional",
-      description: "Segundo lugar representando a Argentina en la competencia iberoamericana",
+      name: "Subcampeon - Olimpiada Matemática Argentina",
+      year: "2017",
+      level: "Provincial",
+      description: "Segundo lugar en la Olimpiada Matemática Santafesina",
       icon: "🥈",
     },
     {
-      name: "Medalla de Bronce - Olimpiada Internacional de Matemática",
-      year: "2015",
+      name: "Mención de Honor - Olimpiada Matemática del Cono Sur",
+      year: "2016",
       level: "Internacional",
-      description: "Tercer lugar en la IMO (International Mathematical Olympiad)",
-      icon: "🥉",
-    },
-    {
-      name: "Premio Especial - Olimpiada de Mayo",
-      year: "2015",
-      level: "Regional",
-      description: "Reconocimiento especial por solución elegante en geometría",
+      description: "Mencion de honor en el selectivo para la Olimpiada Matemática del Cono Sur",
       icon: "🏆",
     },
   ]
@@ -157,15 +150,6 @@ const Education = () => {
                     <span>{edu.location}</span>
                   </div>
                   <p className="edu-description">{edu.description}</p>
-
-                  <div className="edu-highlights">
-                    <h5>Destacados:</h5>
-                    <ul>
-                      {edu.highlights.map((highlight, hIndex) => (
-                        <li key={hIndex}>{highlight}</li>
-                      ))}
-                    </ul>
-                  </div>
                 </div>
               </motion.div>
             ))}
@@ -208,7 +192,7 @@ const Education = () => {
           </div>
         </motion.div>
 
-        {/* Cursos Adicionales */}
+        {/* Cursos Adicionales
         <motion.div
           className="education-section"
           initial={{ opacity: 0, y: 50 }}
@@ -241,7 +225,8 @@ const Education = () => {
             ))}
           </div>
         </motion.div>
-      </div>
+        */}
+      </div> 
 
       <div className="education-decoration">
         <img src="/src/assets/space-orbit.png" alt="" className="decoration-orbit" />

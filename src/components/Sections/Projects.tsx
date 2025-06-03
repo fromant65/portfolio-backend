@@ -92,12 +92,12 @@ const Projects = () => {
               </div>
               <div className="project-links">
                 {project.links?.demo &&
-                <a href={project.links.demo} className="project-link">
+                <a href={project.links.demo} className="project-link" target="_blank">
                   <ExternalLink size={18} />
                 </a>
                 }
                 {project.links?.github &&
-                <a href={project.links.github} className="project-link">
+                <a href={project.links.github} className="project-link" target="_blank">
                   <Github size={18} />
                 </a>
                 }
