@@ -1,8 +1,16 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Code, Database, Server, Cloud, Brain, Users, Globe } from "lucide-react"
+import { Code, Database, Server, Brain, Users, Globe } from "lucide-react"
 import "./Skills.css"
+
+function mapLevel(level: string){
+  if(level == "Nativo") return 100;
+  if(level == "B2") return 66;
+  if(level == "C1") return 85;
+  if(level == "N4") return 20;
+  if(level == "N3") return 40;
+}
 
 const Skills = () => {
   const technicalSkills = [
@@ -10,50 +18,44 @@ const Skills = () => {
       category: "Lenguajes de Programación",
       icon: Code,
       skills: [
-        { name: "Python", experience: "5 años", specialty: "Backend & ML" },
-        { name: "JavaScript/TypeScript", experience: "4 años", specialty: "Full Stack" },
-        { name: "Java", experience: "3 años", specialty: "Enterprise" },
-        { name: "Go", experience: "2 años", specialty: "Microservicios" },
-        { name: "Rust", experience: "1 año", specialty: "Performance" },
-        { name: "SQL", experience: "5 años", specialty: "Optimización" },
+        { name: "C/C++", experience: "8 años", specialty: "Data Structures" },
+        { name: "JavaScript/TypeScript", experience: "5 años", specialty: "Backend" },
+        { name: "Python", experience: "2 años", specialty: "Scripting" },
+        { name: "Racket", experience: "2 años", specialty: ""},
+        { name: "Rust", experience: "1 año", specialty: "" },
       ],
     },
     {
       category: "Bases de Datos",
       icon: Database,
       skills: [
-        { name: "PostgreSQL", experience: "5 años", specialty: "OLTP & Analytics" },
-        { name: "MongoDB", experience: "3 años", specialty: "Document Store" },
-        { name: "Redis", experience: "4 años", specialty: "Caching & Pub/Sub" },
-        { name: "ClickHouse", experience: "2 años", specialty: "Analytics" },
-        { name: "TimescaleDB", experience: "2 años", specialty: "Time Series" },
-        { name: "Elasticsearch", experience: "2 años", specialty: "Search & Logs" },
+        { name: "MySQL", experience: "2 años", specialty: "Data Store" },
+        { name: "Firestore", experience: "2 años", specialty: "Document Store" },
+        { name: "MongoDB", experience: "1 año", specialty: "Document Store" },
       ],
     },
     {
       category: "Frameworks & APIs",
       icon: Server,
       skills: [
-        { name: "FastAPI", experience: "4 años", specialty: "High Performance APIs" },
-        { name: "Node.js/Express", experience: "4 años", specialty: "Real-time Apps" },
-        { name: "Spring Boot", experience: "3 años", specialty: "Enterprise APIs" },
-        { name: "Django", experience: "3 años", specialty: "Rapid Development" },
-        { name: "GraphQL", experience: "2 años", specialty: "Flexible APIs" },
-        { name: "gRPC", experience: "2 años", specialty: "Microservicios" },
+        { name: "Next.js", experience: "2 años", specialty: "Full Stack Web Development" },
+        { name: "Firebase", experience: "2 años", specialty: "Fast app development & Hosting" },
+        { name: "Nest.js", experience: "1 año", specialty: "Real-time APIs" },
+        { name: "Node.js/Express", experience: "1 año", specialty: "Real-time APIs" },
       ],
     },
-    {
-      category: "Cloud & DevOps",
-      icon: Cloud,
-      skills: [
-        { name: "AWS", experience: "4 años", specialty: "Serverless & Containers" },
-        { name: "Docker", experience: "5 años", specialty: "Containerización" },
-        { name: "Kubernetes", experience: "3 años", specialty: "Orquestación" },
-        { name: "Terraform", experience: "2 años", specialty: "IaC" },
-        { name: "GitHub Actions", experience: "3 años", specialty: "CI/CD" },
-        { name: "Monitoring", experience: "2 años", specialty: "Observabilidad" },
-      ],
-    },
+    // {
+    //   category: "Cloud & DevOps",
+    //   icon: Cloud,
+    //   skills: [
+    //     { name: "AWS", experience: "4 años", specialty: "Serverless & Containers" },
+    //     { name: "Docker", experience: "5 años", specialty: "Containerización" },
+    //     { name: "Kubernetes", experience: "3 años", specialty: "Orquestación" },
+    //     { name: "Terraform", experience: "2 años", specialty: "IaC" },
+    //     { name: "GitHub Actions", experience: "3 años", specialty: "CI/CD" },
+    //     { name: "Monitoring", experience: "2 años", specialty: "Observabilidad" },
+    //   ],
+    // },
   ]
 
   const softSkills = [
@@ -67,7 +69,7 @@ const Skills = () => {
       name: "Comunicación",
       description: "Habilidad para explicar conceptos técnicos complejos a audiencias diversas",
       icon: "💬",
-      strength: "Excelente",
+      strength: "Fuerte",
     },
     {
       name: "Resolución de Problemas",
@@ -79,13 +81,7 @@ const Skills = () => {
       name: "Mentoring",
       description: "Experiencia desarrollando talento junior y compartiendo conocimiento",
       icon: "🌱",
-      strength: "Fuerte",
-    },
-    {
-      name: "Adaptabilidad",
-      description: "Flexibilidad para aprender nuevas tecnologías y adaptarse a cambios",
-      icon: "🔄",
-      strength: "Excelente",
+      strength: "Entrenada",
     },
     {
       name: "Pensamiento Estratégico",
@@ -95,39 +91,16 @@ const Skills = () => {
     },
   ]
 
-  const economicSkills = [
-    {
-      name: "Análisis Econométrico",
-      tools: ["Python (pandas, scikit-learn)", "R", "Stata"],
-      focus: "Modelado predictivo",
-    },
-    {
-      name: "Modelado Financiero",
-      tools: ["Monte Carlo", "VaR", "Black-Scholes"],
-      focus: "Gestión de riesgo",
-    },
-    {
-      name: "Series Temporales",
-      tools: ["ARIMA", "GARCH", "Prophet"],
-      focus: "Forecasting",
-    },
-    {
-      name: "Machine Learning Financiero",
-      tools: ["TensorFlow", "PyTorch", "XGBoost"],
-      focus: "Trading algorithms",
-    },
-  ]
-
   const languages = [
     {
       name: "Español",
       flag: "🇦🇷",
       native: true,
       skills: {
-        listening: 100,
-        reading: 100,
-        speaking: 100,
-        writing: 100,
+        listening: "Nativo",
+        reading: "Nativo",
+        speaking: "Nativo",
+        writing: "Nativo",
       },
     },
     {
@@ -135,10 +108,10 @@ const Skills = () => {
       flag: "🇺🇸",
       native: false,
       skills: {
-        listening: 95,
-        reading: 98,
-        speaking: 90,
-        writing: 92,
+        listening: "B2",
+        reading: "C1",
+        speaking: "B2",
+        writing: "C1",
       },
     },
     {
@@ -146,10 +119,10 @@ const Skills = () => {
       flag: "🇯🇵",
       native: false,
       skills: {
-        listening: 70,
-        reading: 75,
-        speaking: 65,
-        writing: 68,
+        listening: "N4",
+        reading: "N3",
+        speaking: "N4",
+        writing: "N4",
       },
     },
   ]
@@ -257,44 +230,6 @@ const Skills = () => {
           </div>
         </motion.div>
 
-        {/* Habilidades Económicas */}
-        <motion.div
-          className="skills-section"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
-          <h3 className="subsection-title">
-            <span className="economic-icon">📈</span>
-            Expertise Económico
-          </h3>
-
-          <div className="economic-skills">
-            {economicSkills.map((skill, index) => (
-              <motion.div
-                key={index}
-                className="economic-skill-card"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
-                whileHover={{ y: -3 }}
-              >
-                <div className="economic-header">
-                  <h4 className="economic-skill-name">{skill.name}</h4>
-                  <span className="economic-focus">{skill.focus}</span>
-                </div>
-                <div className="economic-tools">
-                  {skill.tools.map((tool, toolIndex) => (
-                    <span key={toolIndex} className="economic-tool">
-                      {tool}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
         {/* Idiomas */}
         <motion.div
           className="skills-section"
@@ -330,13 +265,13 @@ const Skills = () => {
                     <div key={skill} className="language-skill">
                       <div className="skill-label-section">
                         <span className="skill-label">{skill}</span>
-                        <span className="skill-percentage">{level}%</span>
+                        <span className="skill-percentage">{level}</span>
                       </div>
                       <div className="skill-bar">
                         <motion.div
                           className="skill-progress"
                           initial={{ width: 0 }}
-                          animate={{ width: `${level}%` }}
+                          animate={{ width: `${mapLevel(level)}%` }}
                           transition={{ duration: 1, delay: 1 + index * 0.1 }}
                         />
                       </div>
