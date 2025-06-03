@@ -1,0 +1,287 @@
+.skills {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.skills-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.skills-section {
+  width: 100%;
+}
+
+.subsection-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(139, 92, 246, 0.3);
+}
+
+.subsection-icon {
+  color: var(--primary-violet);
+}
+
+.economic-icon {
+  font-size: 1.8rem;
+}
+
+/* Habilidades Técnicas */
+.technical-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.skill-category {
+  background: rgba(15, 15, 35, 0.8);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.category-icon {
+  color: var(--primary-cyan);
+  width: 24px;
+  height: 24px;
+}
+
+.category-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skill-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+}
+
+.skill-name {
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.skill-years {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.skill-bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(139, 92, 246, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-violet), var(--primary-cyan));
+  border-radius: 4px;
+}
+
+.skill-level {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  min-width: 40px;
+  text-align: right;
+}
+
+/* Habilidades Blandas */
+.soft-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.soft-skill-card {
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.soft-skill-card:hover {
+  border-color: var(--primary-cyan);
+  box-shadow: 0 15px 30px rgba(6, 182, 212, 0.2);
+}
+
+.soft-skill-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.soft-skill-icon {
+  font-size: 1.5rem;
+}
+
+.soft-skill-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.soft-skill-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.soft-skill-meter {
+  height: 6px;
+  background: rgba(6, 182, 212, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.soft-skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-cyan), var(--primary-violet));
+  border-radius: 3px;
+}
+
+/* Habilidades Económicas */
+.economic-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.economic-skill-card {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.economic-skill-card:hover {
+  border-color: var(--accent-gold);
+  box-shadow: 0 15px 30px rgba(245, 158, 11, 0.2);
+}
+
+.economic-skill-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.economic-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.economic-tool {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--accent-gold);
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.economic-level {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.economic-level span {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.economic-bar {
+  height: 6px;
+  background: rgba(245, 158, 11, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.economic-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-gold), #fcd34d);
+  border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  .technical-skills {
+    grid-template-columns: 1fr;
+  }
+
+  .soft-skills {
+    grid-template-columns: 1fr;
+  }
+
+  .economic-skills {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .skill-info {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .skill-bar {
+    width: 100%;
+  }
+
+  .skill-level {
+    text-align: left;
+  }
+
+  .subsection-title {
+    font-size: 1.5rem;
+  }
+}
