@@ -36,10 +36,11 @@ body {
   position: relative;
   z-index: 2;
   min-height: 100vh;
+  padding-top: 80px;
 }
 
 .section-container {
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   justify-content: center;

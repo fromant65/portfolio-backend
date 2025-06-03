@@ -10,12 +10,12 @@ interface HeaderProps {
 
 const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
   const navItems = [
-    { id: "inicio", label: "始" },
-    { id: "experiencia", label: "経験" },
-    { id: "proyectos", label: "項目" },
-    { id: "formacion", label: "学習" },
-    { id: "habilidades", label: "技能" },
-    { id: "contacto", label: "連絡" },
+    { id: "inicio", label: "Inicio" },
+    { id: "experiencia", label: "Experiencia" },
+    { id: "proyectos", label: "Proyectos" },
+    { id: "formacion", label: "Formación" },
+    { id: "habilidades", label: "Habilidades" },
+    { id: "contacto", label: "Contacto" },
   ]
 
   return (
@@ -27,7 +27,43 @@ const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
     >
       <div className="header-content">
         <motion.div className="logo" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          <span className="logo-symbol">宇</span>
+          <div className="logo-symbol">
+            <svg width="40" height="40" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15 10 L15 50 M15 10 L35 10 M15 28 L30 28"
+                stroke="url(#gradient1)"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M25 15 L45 15 M35 15 L35 45"
+                stroke="url(#gradient2)"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <circle cx="45" cy="25" r="2" fill="url(#gradient1)" opacity="0.7" />
+              <circle cx="20" cy="35" r="1.5" fill="url(#gradient2)" opacity="0.5" />
+              <path
+                d="M10 45 L12 47 L10 49"
+                stroke="url(#gradient1)"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                fill="none"
+              />
+              <defs>
+                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: "#8b5cf6", stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: "#06b6d4", stopOpacity: 1 }} />
+                </linearGradient>
+                <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: "#06b6d4", stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: "#8b5cf6", stopOpacity: 1 }} />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
           <span className="logo-text">Backend Dev</span>
         </motion.div>
 
@@ -43,8 +79,7 @@ const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 * index }}
             >
-              <span className="nav-kanji">{item.label}</span>
-              <span className="nav-text">{item.id}</span>
+              <span className="nav-text">{item.label}</span>
             </motion.button>
           ))}
         </nav>

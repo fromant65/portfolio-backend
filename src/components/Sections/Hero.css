@@ -119,43 +119,29 @@
   text-align: center;
 }
 
-.hero-decoration {
+.hero-decorations {
   position: absolute;
-  top: 10%;
-  right: 10%;
-  width: 200px;
-  height: 200px;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: -1;
 }
 
-.decoration-circle {
-  width: 100%;
-  height: 100%;
-  border: 2px solid rgba(6, 182, 212, 0.3);
-  border-radius: 50%;
-  position: relative;
+.decoration {
+  position: absolute;
+  opacity: 0.6;
 }
 
-.decoration-circle::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  height: 60%;
-  border: 1px solid rgba(139, 92, 246, 0.4);
-  border-radius: 50%;
+.decoration.constellation {
+  top: 10%;
+  right: 15%;
 }
 
-.decoration-line {
-  position: absolute;
-  top: 50%;
-  left: -50px;
-  width: 100px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--primary-violet), transparent);
+.decoration.zen-circle {
+  bottom: 20%;
+  right: 5%;
 }
 
 @media (max-width: 1024px) {
@@ -170,11 +156,20 @@
     margin: 0 auto;
   }
 
-  .hero-decoration {
+  .hero-decorations {
     position: relative;
-    top: auto;
-    right: auto;
+    height: 200px;
     margin-top: 2rem;
+  }
+
+  .decoration.constellation {
+    top: 20%;
+    right: 20%;
+  }
+
+  .decoration.zen-circle {
+    bottom: 10%;
+    left: 20%;
   }
 }
 
@@ -204,5 +199,9 @@
   .hero-skills {
     grid-template-columns: 1fr;
     max-width: 250px;
+  }
+
+  .decoration {
+    transform: scale(0.7);
   }
 }
