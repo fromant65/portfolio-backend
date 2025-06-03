@@ -67,7 +67,6 @@ const Experience = () => {
           <span className="title-kanji">経験</span>
           <span className="title-text">Experiencia Profesional</span>
         </h2>
-        <p className="section-subtitle">Mi trayectoria construyendo sistemas que escalan y perduran</p>
       </motion.div>
 
       <div className="experience-timeline">

@@ -69,7 +69,6 @@ const Projects = () => {
           <span className="title-kanji">企画</span>
           <span className="title-text">Proyectos</span>
         </h2>
-        <p className="section-subtitle">Soluciones que transforman ideas en sistemas robustos y escalables</p>
       </motion.div>
 
       <div className="projects-grid">

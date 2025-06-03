@@ -102,7 +102,6 @@ const Education = () => {
           <span className="title-kanji">教育</span>
           <span className="title-text">Formación Académica</span>
         </h2>
-        <p className="section-subtitle">El conocimiento como base sólida para la innovación tecnológica</p>
       </motion.div>
 
       <div className="education-content">

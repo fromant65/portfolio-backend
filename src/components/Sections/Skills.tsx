@@ -18,9 +18,9 @@ const Skills = () => {
       category: "Lenguajes de Programación",
       icon: Code,
       skills: [
-        { name: "C/C++", experience: "8 años", specialty: "Data Structures" },
-        { name: "JavaScript/TypeScript", experience: "5 años", specialty: "Backend" },
-        { name: "Python", experience: "2 años", specialty: "Scripting" },
+        { name: "C/C++", experience: "8 años", specialty: "" },
+        { name: "JavaScript/TypeScript", experience: "5 años", specialty: "" },
+        { name: "Python", experience: "2 años", specialty: "" },
         { name: "Racket", experience: "2 años", specialty: ""},
         { name: "Rust", experience: "1 año", specialty: "" },
       ],
@@ -140,9 +140,6 @@ const Skills = () => {
           <span className="title-kanji">能力</span>
           <span className="title-text">Habilidades</span>
         </h2>
-        <p className="section-subtitle">
-          La síntesis perfecta entre expertise técnico, liderazgo humano y visión económica
-        </p>
       </motion.div>
 
       <div className="skills-content">

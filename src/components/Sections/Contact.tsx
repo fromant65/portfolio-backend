@@ -9,19 +9,19 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "dev@ejemplo.com",
-      link: "mailto:dev@ejemplo.com",
+      value: "fromant65@gmail.com",
+      link: "mailto:fromant65@gmail.com",
     },
     {
       icon: Phone,
       label: "Teléfono",
-      value: "+54 11 1234-5678",
-      link: "tel:+541112345678",
+      value: "+54 341 507-3270",
+      link: "tel:+543415073270",
     },
     {
       icon: MapPin,
       label: "Ubicación",
-      value: "Buenos Aires, Argentina",
+      value: "Rosario, Argentina",
       link: "#",
     },
   ]
@@ -30,14 +30,14 @@ const Contact = () => {
     {
       icon: Github,
       label: "GitHub",
-      username: "@miusuario",
-      link: "https://github.com/miusuario",
+      username: "@fromant65",
+      link: "https://github.com/fromant65",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      username: "/in/miusuario",
-      link: "https://linkedin.com/in/miusuario",
+      username: "/in/fulvio-todone",
+      link: "https://www.linkedin.com/in/fulvio-todone/",
     },
   ]
 
@@ -54,7 +54,6 @@ const Contact = () => {
           <span className="title-kanji">連絡</span>
           <span className="title-text">Contacto</span>
         </h2>
-        <p className="section-subtitle">Construyamos juntos el futuro de la tecnología</p>
       </motion.div>
 
       <div className="contact-content">
@@ -133,15 +132,11 @@ const Contact = () => {
             <div className="availability-details">
               <div className="detail-item">
                 <span className="detail-label">Modalidad:</span>
-                <span className="detail-value">Remoto / Híbrido</span>
+                <span className="detail-value">Remoto / Híbrido / Presencial</span>
               </div>
               <div className="detail-item">
                 <span className="detail-label">Tipo de proyecto:</span>
-                <span className="detail-value">Backend / Full Stack</span>
-              </div>
-              <div className="detail-item">
-                <span className="detail-label">Tiempo de respuesta:</span>
-                <span className="detail-value">24-48 horas</span>
+                <span className="detail-value">Desarrollo Web / Sistemas</span>
               </div>
             </div>
 
@@ -159,10 +154,6 @@ const Contact = () => {
                 <div className="collaboration-item">
                   <span className="collaboration-icon">🏗️</span>
                   <span className="collaboration-text">Arquitectura de software</span>
-                </div>
-                <div className="collaboration-item">
-                  <span className="collaboration-icon">📊</span>
-                  <span className="collaboration-text">Análisis de datos</span>
                 </div>
               </div>
             </div>
