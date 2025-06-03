@@ -41,9 +41,13 @@
 .logo-text {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--text-primary);
+  background: linear-gradient(to right, var(--primary-violet), var(--primary-cyan));
+  background-clip:inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   letter-spacing: 0.05em;
 }
+
 
 /* ------------------------- */
 /* Botón hamburguesa (móvil)  */

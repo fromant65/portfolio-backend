@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import "./Header.css";
-import { Logo } from "./logo";
+import { Logo } from "./Logo";
 
 interface HeaderProps {
   activeSection: string;
@@ -47,7 +47,7 @@ const Header = ({ activeSection, changeSection }: HeaderProps) => {
           whileTap={{ scale: 0.95 }}
         >
           <Logo />
-          <span className="logo-text">Backend Dev</span>
+          <span className="logo-text">Fulvio Todone</span>
         </motion.div>
         <button className="hamburger-button" onClick={toggleMenu}>
           {menuOpen ? <X size={24} /> : <Menu size={24} />}

@@ -1,22 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code, Database, Server, TrendingUp } from "lucide-react";
+import { Code, Database, FolderKanban, Landmark, MonitorCog, Triangle } from "lucide-react";
 import "./Hero.css";
 
 const Hero = () => {
   const skills = [
     { icon: Code, label: "Clean Code", delay: 0.2 },
-    { icon: Database, label: "Databases", delay: 0.4 },
-    { icon: Server, label: "APIs", delay: 0.6 },
-    { icon: TrendingUp, label: "Economics", delay: 0.8 },
+    { icon: Database, label: "Databases & ORM", delay: 0.4 },
+    { icon: MonitorCog, label: "Systems Design", delay: 0.6 },
+    { icon: Landmark, label: "Software Architecture", delay: 0.8 },
+    { icon: Triangle, label: "Algorithms", delay: 1},
+    { icon: FolderKanban, label: "Project Management", delay: 1.2}
   ];
 
   return (
     <section className="hero">
-      {/* ---------------------------------- */}
-      {/* 1) Contenido principal (texto + stats + skills) */}
-      {/* ---------------------------------- */}
       <div className="hero-content">
         <motion.div
           className="hero-text"
@@ -41,7 +40,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             Construyendo sistemas robustos y escalables que impulsan el futuro digital. Combinando la precisión
-            técnica con la elegancia del diseño minimalista y la lógica de los mercados económicos.
+            técnica con un diseño elegante y amigable.
           </motion.p>
 
           <motion.div
