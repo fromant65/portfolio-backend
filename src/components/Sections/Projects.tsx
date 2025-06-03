@@ -7,76 +7,52 @@ import "./Projects.css"
 const Projects = () => {
   const projects = [
     {
-      title: "EconoAPI",
+      title: "Joya App",
       category: "Profesional",
       description:
-        "API REST para análisis económico en tiempo real con machine learning integrado. Procesa datos macroeconómicos y genera predicciones de mercado.",
-      technologies: ["Python", "FastAPI", "PostgreSQL", "Redis", "TensorFlow"],
+        "Aplicación de gestión de insumos, gastos fijos y productos para empresas gastronómicas, con la opción para generar presupuestos personalizados para clientes",
+      technologies: ["Typescript", "Next.js", "MySQL", "TRPC", "Drizzle"],
       features: [
-        "Análisis predictivo de mercados",
-        "Dashboard en tiempo real",
-        "API rate limiting avanzado",
-        "Integración con 15+ fuentes de datos",
+        "Gestión de gastos fijos y variables",
+        "Creación personalizada de productos con cálculo de precios sugeridos",
+        "Generación de presupuestos",
+        "Gestión de clientes",
+        "Analytics generales sobre usuarios",
       ],
       links: {
-        demo: "#",
-        github: "#",
+        demo: "https://joyaapp.com",
       },
       status: "En producción",
     },
     {
-      title: "CloudSync",
-      category: "Profesional",
-      description:
-        "Sistema de sincronización distribuida para aplicaciones multi-tenant. Arquitectura de microservicios con event sourcing.",
-      technologies: ["Node.js", "Kubernetes", "MongoDB", "RabbitMQ", "Docker"],
-      features: [
-        "Sincronización en tiempo real",
-        "Auto-scaling horizontal",
-        "Event sourcing pattern",
-        "Multi-tenant architecture",
-      ],
-      links: {
-        demo: "#",
-        github: "#",
-      },
-      status: "En producción",
-    },
-    {
-      title: "CryptoTracker",
+      title: "Robot",
       category: "Personal",
       description:
-        "Plataforma de análisis técnico para criptomonedas con algoritmos de trading automatizado y backtesting.",
-      technologies: ["Go", "TimescaleDB", "WebSocket", "React", "D3.js"],
+        "Trabajo práctico final individual para la materia Estructuras de Datos y Algoritmos I. Consiste en un robot que busca atravesar una grilla de celdas con obstáculos desconocida en la menor cantidad de movimientos posible. El mismo fue aprobado con nota perfecta.",
+      technologies: ["C", "Python"],
       features: [
-        "Trading bot automatizado",
-        "Análisis técnico avanzado",
-        "Backtesting histórico",
-        "Alertas personalizables",
+        "Implementacion de algoritmos de path finding (Floodfill, D* Lite)",
+        "Generador de entornos aleatorios",
       ],
       links: {
-        demo: "#",
-        github: "#",
+        github: "https://github.com/fromant65/Robot",
       },
+      status: "Finalizado",
+    },
+    {
+      title: "Standfit Insumos",
+      category: "Profesional",
+      description:
+        "Sistema de gestión interno para la empresa de producción de máquinas de gimnasio Standfit, localizada en Goya, Corrientes.",
+      technologies: ["Typescript", "Next.js", "Firebase", "TRPC", "ShadCN"],
+      features: [
+        "Manejo de insumos para tapicería",
+        "Creación de máquinas",
+        "Gestion de órdenes de clientes y pedidos hacia tapiceros",
+        "Estadísticas generales",
+        "Sistema de gestión para tapiceros"
+      ],
       status: "Beta",
-    },
-    {
-      title: "DevMetrics",
-      category: "Personal",
-      description:
-        "Herramienta de análisis de productividad para equipos de desarrollo. Métricas DORA y insights de performance.",
-      technologies: ["Rust", "GraphQL", "ClickHouse", "Vue.js", "GitHub API"],
-      features: [
-        "Métricas DORA automatizadas",
-        "Análisis de code review",
-        "Burndown charts inteligentes",
-        "Integración con Git providers",
-      ],
-      links: {
-        demo: "#",
-        github: "#",
-      },
-      status: "Open Source",
     },
   ]
 
@@ -115,12 +91,16 @@ const Projects = () => {
                 </div>
               </div>
               <div className="project-links">
+                {project.links?.demo &&
                 <a href={project.links.demo} className="project-link">
                   <ExternalLink size={18} />
                 </a>
+                }
+                {project.links?.github &&
                 <a href={project.links.github} className="project-link">
                   <Github size={18} />
                 </a>
+                }
               </div>
             </div>
 
