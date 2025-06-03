@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Header from "./components/Layout/Header"
@@ -20,6 +18,16 @@ function App() {
     const timer = setTimeout(() => setIsLoading(false), 2000)
     return () => clearTimeout(timer)
   }, [])
+  const changeSection = (nextSection: string) => {
+    setIsLoading(true)
+
+    window.scrollTo(0, 0)
+
+    setTimeout(() => {
+      setActiveSection(nextSection)
+      setIsLoading(false)
+    }, 500)
+  }
 
   const sections = [
     { id: "inicio", component: Hero },
@@ -49,7 +57,7 @@ function App() {
   return (
     <div className="app">
       <StarField />
-      <Header activeSection={activeSection} setActiveSection={setActiveSection} />
+   <Header activeSection={activeSection} changeSection={changeSection} />
 
       <main className="main-content">
         <AnimatePresence mode="wait">

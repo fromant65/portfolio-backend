@@ -1,0 +1,16 @@
+/* ------------------------------------------- */
+/* 1) Estilos base para que el SVG sea “responsive” */
+/* ------------------------------------------- */
+
+.logo-symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* El tamaño real lo determina el contenedor padre (mediante .logo o .hero-logo, etc.) */
+}
+
+.logo-symbol svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}

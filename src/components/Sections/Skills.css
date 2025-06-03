@@ -3,6 +3,40 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.title-text {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.title-kanji {
+  font-size: 3rem;
+  color: var(--primary-violet);
+  font-weight: 700;
 }
 
 .skills-content {
@@ -78,47 +112,42 @@
 
 .skill-item {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  padding: 1rem;
+  background: rgba(139, 92, 246, 0.05);
+  border: 1px solid rgba(139, 92, 246, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
-.skill-info {
+.skill-item:hover {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.skill-main {
   display: flex;
   flex-direction: column;
-  min-width: 120px;
+  gap: 0.2rem;
 }
 
 .skill-name {
   color: var(--text-primary);
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
-.skill-years {
+.skill-specialty {
   color: var(--text-secondary);
   font-size: 0.8rem;
+  opacity: 0.8;
 }
 
-.skill-bar {
-  flex: 1;
-  height: 8px;
-  background: rgba(139, 92, 246, 0.2);
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.skill-progress {
-  height: 100%;
-  background: linear-gradient(90deg, var(--primary-violet), var(--primary-cyan));
-  border-radius: 4px;
-}
-
-.skill-level {
-  color: var(--text-secondary);
-  font-size: 0.8rem;
+.skill-experience {
+  color: var(--primary-cyan);
+  font-size: 0.85rem;
   font-weight: 500;
-  min-width: 40px;
-  text-align: right;
 }
 
 /* Habilidades Blandas */
@@ -144,39 +173,40 @@
 
 .soft-skill-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
   margin-bottom: 1rem;
 }
 
 .soft-skill-icon {
   font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.soft-skill-title-section {
+  flex: 1;
 }
 
 .soft-skill-name {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.soft-skill-strength {
+  background: rgba(6, 182, 212, 0.2);
+  color: var(--primary-cyan);
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 .soft-skill-description {
   color: var(--text-secondary);
   line-height: 1.6;
-  margin-bottom: 1rem;
   font-size: 0.9rem;
-}
-
-.soft-skill-meter {
-  height: 6px;
-  background: rgba(6, 182, 212, 0.2);
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.soft-skill-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--primary-cyan), var(--primary-violet));
-  border-radius: 3px;
 }
 
 /* Habilidades Económicas */
@@ -200,18 +230,29 @@
   box-shadow: 0 15px 30px rgba(245, 158, 11, 0.2);
 }
 
+.economic-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
 .economic-skill-name {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 1rem;
+}
+
+.economic-focus {
+  color: var(--accent-gold);
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .economic-tools {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1rem;
 }
 
 .economic-tool {
@@ -223,29 +264,124 @@
   font-weight: 500;
 }
 
-.economic-level {
+/* Idiomas */
+.languages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.language-card {
+  background: rgba(15, 15, 35, 0.8);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.language-card:hover {
+  border-color: var(--primary-violet);
+  box-shadow: 0 15px 30px rgba(139, 92, 246, 0.2);
+}
+
+.language-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.language-flag {
+  font-size: 2rem;
+}
+
+.language-info {
+  flex: 1;
+}
+
+.language-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.native-badge {
+  background: rgba(139, 92, 246, 0.2);
+  color: var(--primary-violet);
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.language-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.language-skill {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.economic-level span {
-  color: var(--text-secondary);
+.skill-label-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-label {
+  color: var(--text-primary);
+  font-weight: 500;
   font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.skill-percentage {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
   font-weight: 500;
 }
 
-.economic-bar {
+.skill-bar {
   height: 6px;
-  background: rgba(245, 158, 11, 0.2);
+  background: rgba(139, 92, 246, 0.2);
   border-radius: 3px;
   overflow: hidden;
 }
 
-.economic-progress {
+.skill-progress {
   height: 100%;
-  background: linear-gradient(90deg, var(--accent-gold), #fcd34d);
+  background: linear-gradient(90deg, var(--primary-violet), var(--primary-cyan));
   border-radius: 3px;
+}
+
+.skills-decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.decoration-wave {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  opacity: 0.4;
+}
+
+.decoration-chart {
+  position: absolute;
+  bottom: 20%;
+  right: 10%;
+  opacity: 0.3;
 }
 
 @media (max-width: 768px) {
@@ -261,27 +397,30 @@
     grid-template-columns: 1fr;
   }
 
+  .languages-grid {
+    grid-template-columns: 1fr;
+  }
+
   .skill-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
 
-  .skill-info {
+  .skill-main {
     width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .skill-bar {
-    width: 100%;
-  }
-
-  .skill-level {
-    text-align: left;
   }
 
   .subsection-title {
     font-size: 1.5rem;
+  }
+
+  .title-text {
+    font-size: 2rem;
+  }
+
+  .decoration-wave,
+  .decoration-chart {
+    transform: scale(0.7);
   }
 }

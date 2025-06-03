@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Mail, Phone, MapPin, Github, Linkedin, Download, Send } from "lucide-react"
+import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react"
 import "./Contact.css"
 
 const Contact = () => {
@@ -50,6 +50,7 @@ const Contact = () => {
         transition={{ duration: 0.8 }}
       >
         <h2 className="section-title">
+          {/* renraku */}
           <span className="title-kanji">連絡</span>
           <span className="title-text">Contacto</span>
         </h2>
@@ -112,112 +113,60 @@ const Contact = () => {
               ))}
             </div>
           </div>
-
-          <motion.div
-            className="download-cv"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            <button className="cv-button">
-              <Download size={20} />
-              <span>Descargar CV</span>
-            </button>
-          </motion.div>
         </motion.div>
 
-        {/* Formulario de Contacto */}
+        {/* Mensaje de Disponibilidad */}
         <motion.div
-          className="contact-form-container"
+          className="availability-section"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <h3 className="contact-section-title">Envíame un Mensaje</h3>
+          <h3 className="contact-section-title">Disponibilidad</h3>
 
-          <form className="contact-form">
-            <motion.div
-              className="form-group"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-            >
-              <label htmlFor="name" className="form-label">
-                Nombre
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="form-input"
-                placeholder="Tu nombre completo"
-                required
-              />
-            </motion.div>
+          <div className="availability-card">
+            <div className="availability-status">
+              <div className="status-indicator active"></div>
+              <span className="status-text">Disponible para nuevos proyectos</span>
+            </div>
 
-            <motion.div
-              className="form-group"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-            >
-              <label htmlFor="email" className="form-label">
-                Email
-              </label>
-              <input type="email" id="email" name="email" className="form-input" placeholder="tu@email.com" required />
-            </motion.div>
+            <div className="availability-details">
+              <div className="detail-item">
+                <span className="detail-label">Modalidad:</span>
+                <span className="detail-value">Remoto / Híbrido</span>
+              </div>
+              <div className="detail-item">
+                <span className="detail-label">Tipo de proyecto:</span>
+                <span className="detail-value">Backend / Full Stack</span>
+              </div>
+              <div className="detail-item">
+                <span className="detail-label">Tiempo de respuesta:</span>
+                <span className="detail-value">24-48 horas</span>
+              </div>
+            </div>
 
-            <motion.div
-              className="form-group"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.7 }}
-            >
-              <label htmlFor="subject" className="form-label">
-                Asunto
-              </label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                className="form-input"
-                placeholder="¿En qué puedo ayudarte?"
-                required
-              />
-            </motion.div>
-
-            <motion.div
-              className="form-group"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-            >
-              <label htmlFor="message" className="form-label">
-                Mensaje
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                className="form-textarea"
-                placeholder="Cuéntame sobre tu proyecto o idea..."
-                rows={5}
-                required
-              />
-            </motion.div>
-
-            <motion.button
-              type="submit"
-              className="submit-button"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.9 }}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <Send size={20} />
-              <span>Enviar Mensaje</span>
-            </motion.button>
-          </form>
+            <div className="collaboration-types">
+              <h4 className="collaboration-title">Tipos de Colaboración</h4>
+              <div className="collaboration-list">
+                <div className="collaboration-item">
+                  <span className="collaboration-icon">🚀</span>
+                  <span className="collaboration-text">Desarrollo de MVP</span>
+                </div>
+                <div className="collaboration-item">
+                  <span className="collaboration-icon">⚡</span>
+                  <span className="collaboration-text">Optimización de sistemas</span>
+                </div>
+                <div className="collaboration-item">
+                  <span className="collaboration-icon">🏗️</span>
+                  <span className="collaboration-text">Arquitectura de software</span>
+                </div>
+                <div className="collaboration-item">
+                  <span className="collaboration-icon">📊</span>
+                  <span className="collaboration-text">Análisis de datos</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
 
@@ -228,7 +177,8 @@ const Contact = () => {
         animate={{ opacity: 1, rotate: 0 }}
         transition={{ duration: 2, delay: 1 }}
       >
-        <div className="decoration-symbol">和</div>
+        <img src="/src/assets/zen-wave.png" alt="" className="decoration-zen" />
+        <img src="/src/assets/space-orbit.png" alt="" className="decoration-orbit" />
       </motion.div>
     </section>
   )

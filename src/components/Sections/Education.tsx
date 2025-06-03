@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { GraduationCap, Award, BookOpen, Calendar } from "lucide-react"
+import { GraduationCap, BookOpen, Calendar, Trophy } from "lucide-react"
 import "./Education.css"
 
 const Education = () => {
@@ -38,34 +38,34 @@ const Education = () => {
     },
   ]
 
-  const certifications = [
+  const recognitions = [
     {
-      name: "AWS Solutions Architect Professional",
-      issuer: "Amazon Web Services",
-      date: "2023",
-      credentialId: "AWS-SAP-2023-001",
-      icon: "☁️",
+      name: "Medalla de Oro - Olimpiada Matemática Argentina",
+      year: "2016",
+      level: "Nacional",
+      description: "Primer lugar en la categoría senior de la Olimpiada Matemática Argentina",
+      icon: "🥇",
     },
     {
-      name: "Certified Kubernetes Administrator",
-      issuer: "Cloud Native Computing Foundation",
-      date: "2023",
-      credentialId: "CKA-2023-002",
-      icon: "⚙️",
+      name: "Medalla de Plata - Olimpiada Iberoamericana de Matemática",
+      year: "2016",
+      level: "Internacional",
+      description: "Segundo lugar representando a Argentina en la competencia iberoamericana",
+      icon: "🥈",
     },
     {
-      name: "MongoDB Certified Developer",
-      issuer: "MongoDB Inc.",
-      date: "2022",
-      credentialId: "MDB-DEV-2022-003",
-      icon: "🍃",
+      name: "Medalla de Bronce - Olimpiada Internacional de Matemática",
+      year: "2015",
+      level: "Internacional",
+      description: "Tercer lugar en la IMO (International Mathematical Olympiad)",
+      icon: "🥉",
     },
     {
-      name: "Google Cloud Professional Data Engineer",
-      issuer: "Google Cloud",
-      date: "2022",
-      credentialId: "GCP-PDE-2022-004",
-      icon: "📊",
+      name: "Premio Especial - Olimpiada de Mayo",
+      year: "2015",
+      level: "Regional",
+      description: "Reconocimiento especial por solución elegante en geometría",
+      icon: "🏆",
     },
   ]
 
@@ -105,7 +105,8 @@ const Education = () => {
         transition={{ duration: 0.8 }}
       >
         <h2 className="section-title">
-          <span className="title-kanji">学習</span>
+          {/*kyouiku */}
+          <span className="title-kanji">教育</span>
           <span className="title-text">Formación Académica</span>
         </h2>
         <p className="section-subtitle">El conocimiento como base sólida para la innovación tecnológica</p>
@@ -171,7 +172,7 @@ const Education = () => {
           </div>
         </motion.div>
 
-        {/* Certificaciones */}
+        {/* Reconocimientos */}
         <motion.div
           className="education-section"
           initial={{ opacity: 0, x: 50 }}
@@ -179,28 +180,28 @@ const Education = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <h3 className="subsection-title">
-            <Award className="subsection-icon" />
-            Certificaciones
+            <Trophy className="subsection-icon" />
+            Reconocimientos Matemáticos
           </h3>
 
-          <div className="certifications-grid">
-            {certifications.map((cert, index) => (
+          <div className="recognitions-grid">
+            {recognitions.map((recognition, index) => (
               <motion.div
                 key={index}
-                className="certification-card"
+                className="recognition-card"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="cert-icon">{cert.icon}</div>
-                <div className="cert-content">
-                  <h4 className="cert-name">{cert.name}</h4>
-                  <p className="cert-issuer">{cert.issuer}</p>
-                  <div className="cert-meta">
-                    <span className="cert-date">{cert.date}</span>
-                    <span className="cert-id">ID: {cert.credentialId}</span>
+                <div className="recognition-icon">{recognition.icon}</div>
+                <div className="recognition-content">
+                  <h4 className="recognition-name">{recognition.name}</h4>
+                  <div className="recognition-meta">
+                    <span className="recognition-year">{recognition.year}</span>
+                    <span className="recognition-level">{recognition.level}</span>
                   </div>
+                  <p className="recognition-description">{recognition.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -240,6 +241,11 @@ const Education = () => {
             ))}
           </div>
         </motion.div>
+      </div>
+
+      <div className="education-decoration">
+        <img src="/src/assets/space-orbit.png" alt="" className="decoration-orbit" />
+        <img src="/src/assets/constellation.png" alt="" className="decoration-constellation" />
       </div>
     </section>
   )

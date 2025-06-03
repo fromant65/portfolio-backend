@@ -3,6 +3,40 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.title-text {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.title-kanji {
+  font-size: 3rem;
+  color: var(--primary-violet);
+  font-weight: 700;
 }
 
 .education-content {
@@ -154,16 +188,16 @@
   font-weight: bold;
 }
 
-/* Certificaciones */
-.certifications-grid {
+/* Reconocimientos */
+.recognitions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
 }
 
-.certification-card {
-  background: rgba(15, 15, 35, 0.8);
-  border: 1px solid rgba(6, 182, 212, 0.2);
+.recognition-card {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.2);
   border-radius: 12px;
   padding: 1.5rem;
   display: flex;
@@ -173,46 +207,52 @@
   backdrop-filter: blur(10px);
 }
 
-.certification-card:hover {
-  border-color: var(--primary-cyan);
-  box-shadow: 0 15px 30px rgba(6, 182, 212, 0.2);
+.recognition-card:hover {
+  border-color: var(--accent-gold);
+  box-shadow: 0 15px 30px rgba(245, 158, 11, 0.2);
 }
 
-.cert-icon {
-  font-size: 2rem;
+.recognition-icon {
+  font-size: 2.5rem;
   flex-shrink: 0;
 }
 
-.cert-content {
+.recognition-content {
   flex: 1;
 }
 
-.cert-name {
+.recognition-name {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 0.3rem;
-}
-
-.cert-issuer {
-  color: var(--primary-cyan);
-  font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
 
-.cert-meta {
+.recognition-meta {
   display: flex;
-  justify-content: space-between;
-  font-size: 0.8rem;
-  color: var(--text-secondary);
+  gap: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.cert-date {
+.recognition-year {
+  color: var(--accent-gold);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.recognition-level {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--accent-gold);
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
   font-weight: 500;
 }
 
-.cert-id {
-  opacity: 0.7;
+.recognition-description {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 /* Cursos */
@@ -258,6 +298,30 @@
   color: var(--text-secondary);
 }
 
+.education-decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.decoration-orbit {
+  position: absolute;
+  top: 15%;
+  right: 5%;
+  opacity: 0.3;
+}
+
+.decoration-constellation {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  opacity: 0.4;
+}
+
 @media (max-width: 768px) {
   .edu-header {
     flex-direction: column;
@@ -270,7 +334,7 @@
     gap: 1rem;
   }
 
-  .certifications-grid {
+  .recognitions-grid {
     grid-template-columns: 1fr;
   }
 
@@ -280,5 +344,14 @@
 
   .subsection-title {
     font-size: 1.5rem;
+  }
+
+  .title-text {
+    font-size: 2rem;
+  }
+
+  .decoration-orbit,
+  .decoration-constellation {
+    transform: scale(0.6);
   }
 }

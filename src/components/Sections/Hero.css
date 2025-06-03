@@ -1,3 +1,7 @@
+/* ------------------------------------------- */
+/* Estilos del Hero */
+/* ------------------------------------------- */
+
 .hero {
   width: 100%;
   max-width: 1200px;
@@ -10,8 +14,11 @@
   padding: 2rem;
 }
 
+/* ----------------------- */
+/* 1) Contenido principal  */
+/* ----------------------- */
 .hero-content {
-  flex: 1;
+  flex: 1; /* ocupe la mitad de ancho en desktop */
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -119,6 +126,25 @@
   text-align: center;
 }
 
+/* -------------------------------- */
+/* 2) Contenedor del logo (lado derecho) */
+/* -------------------------------- */
+.hero-logo {
+  flex: 1; /* ocupa la mitad de ancho en desktop */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ajustamos el tamaño del logo aquí: */
+.hero-logo .logo-symbol {
+  width: 50%;       /* toma 50% de ese contenedor, que a su vez es ½ del ancho total */
+  max-width: 300px; /* opcional, para que no crezca más de 300px */
+}
+
+/* -------------------------------- */
+/* 3) Decoraciones de fondo */
+/* -------------------------------- */
 .hero-decorations {
   position: absolute;
   top: 0;
@@ -144,11 +170,26 @@
   right: 5%;
 }
 
+/* ----------------------- */
+/* Media Queries del Hero */
+/* ----------------------- */
 @media (max-width: 1024px) {
   .hero {
     flex-direction: column;
     text-align: center;
     gap: 2rem;
+  }
+
+  /* Cuando se vuelva columna, el logo debe ir debajo del contenido */
+  .hero-logo {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  /* Logo en móvil ocupa 100% ancho (su contenedor) */
+  .hero-logo .logo-symbol {
+    width: 100%;
+    max-width: none;
   }
 
   .hero-skills {
@@ -197,7 +238,7 @@
   }
 
   .hero-skills {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     max-width: 250px;
   }
 
