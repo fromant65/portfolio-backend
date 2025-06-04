@@ -10,7 +10,7 @@ const Projects = () => {
       title: "Joya App",
       category: "Profesional",
       description:
-        "Aplicación de gestión de insumos, gastos fijos y productos para empresas gastronómicas, con la opción para generar presupuestos personalizados para clientes",
+        "Aplicación de gestión de gastos, insumos y productos para empresas gastronómicas, con la opción para generar presupuestos personalizados para clientes.",
       technologies: ["Typescript", "Next.js", "MySQL", "TRPC", "Drizzle"],
       features: [
         "Gestión de gastos fijos y variables",

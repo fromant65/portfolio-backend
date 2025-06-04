@@ -29,9 +29,9 @@ const Skills = () => {
       category: "Bases de Datos",
       icon: Database,
       skills: [
-        { name: "MySQL", experience: "2 años", specialty: "Data Store" },
-        { name: "Firestore", experience: "2 años", specialty: "Document Store" },
-        { name: "MongoDB", experience: "1 año", specialty: "Document Store" },
+        { name: "MySQL", experience: "2 años", specialty: "" },
+        { name: "Firestore", experience: "2 años", specialty: "" },
+        { name: "MongoDB", experience: "1 año", specialty: "" },
       ],
     },
     {
@@ -87,7 +87,7 @@ const Skills = () => {
       name: "Pensamiento Estratégico",
       description: "Visión a largo plazo para arquitecturas escalables y sostenibles",
       icon: "♟️",
-      strength: "Fuerte",
+      strength: "Excelente",
     },
   ]
 

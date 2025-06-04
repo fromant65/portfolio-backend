@@ -20,7 +20,7 @@ const Experience = () => {
       ],
     },
     {
-      title: "Profesor ayudante de programación",
+      title: "Profesor Ayudante de Programación",
       company: "Universidad Nacional de Rosario",
       location: "Rosario, Argentina",
       period: "2024 - 2025",
@@ -41,12 +41,12 @@ const Experience = () => {
       ],
     },
     {
-      title: "Scripting para aprendizaje de lenguajes",
+      title: "Scripting para Aprendizaje de Idiomas",
       company: "Código abierto",
       location: "Remoto",
       period: "2022 - 2024",
       description: 
-        "El trabajo consistió en generar scripts de análisis de datos y textos, emparejado con la generación de flashcards, para facilitar y guiar el estudio de lenguajes como Inglés y Japonés",
+        "El trabajo consistió en generar scripts de análisis de datos y textos, emparejado con la generación de flashcards, para facilitar y guiar el estudio de lenguajes como Inglés y Japonés.",
       technologies: ["Javascript", "Python", "REGEX", "Bunpro"],
       achievements: [
         "Generación de miles de flashcards con contenido extraído de textos y música",
