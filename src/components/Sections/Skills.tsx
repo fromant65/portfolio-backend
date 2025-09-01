@@ -10,6 +10,7 @@ function mapLevel(level: string){
   if(level == "C1") return 85;
   if(level == "N4") return 20;
   if(level == "N3") return 40;
+  if(level == "N5") return 10;
 }
 
 const Skills = () => {
@@ -108,7 +109,7 @@ const Skills = () => {
       flag: "🇺🇸",
       native: false,
       skills: {
-        listening: "B2",
+        listening: "C1",
         reading: "C1",
         speaking: "B2",
         writing: "C1",
@@ -121,7 +122,7 @@ const Skills = () => {
       skills: {
         listening: "N4",
         reading: "N3",
-        speaking: "N4",
+        speaking: "N5",
         writing: "N4",
       },
     },

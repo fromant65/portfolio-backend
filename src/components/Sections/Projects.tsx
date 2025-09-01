@@ -52,7 +52,22 @@ const Projects = () => {
         "Estadísticas generales",
         "Sistema de gestión para tapiceros"
       ],
-      status: "Beta",
+      status: "En producción",
+    },
+    {
+      title: "Econ Sim",
+      category: "Personal",
+      description:
+        "Simulador de mercados basado en agentes económicos con funciones de consumo y producción individuales.",
+      technologies: ["Rust", "Tauri", "Typescript", "React"],
+      features: [
+        "Simulación de agentes económicos con comportamientos adaptativos",
+        "Simulación de dinámicas poblacionales basadas en calidad de vida",
+        "Simulación de empresas con comportamientos adaptativos",
+        "Visualización en tiempo real de la dinámica del mercado",
+        "Gráficas y estadísticas detalladas de distintas variables involucradas"
+      ],
+      status: "En desarrollo",
     },
   ]
 

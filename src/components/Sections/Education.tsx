@@ -12,7 +12,7 @@ const Education = () => {
       location: "Rosario, Argentina",
       period: "2023 - Presente",
       status: "En proceso",
-      gpa: "9.1/10",
+      gpa: "8.8/10",
       description:
         "Carrera que brinda formación integral en informática, algoritmos y sistemas. Su plan de estudios abarca desde ciencias básicas hasta ingeniería de software, preparando a los estudiantes para la investigación y el desarrollo tecnológico.",
     },
